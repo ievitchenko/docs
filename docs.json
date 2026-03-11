@@ -11,22 +11,8 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "index",
-              "quickstart"
-            ]
-          },
-          {
-            "group": "API Reference",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          }
-        ]
+        "tab": "API Reference",
+        "openapi": "openapi.json"
       }
     ]
   },
