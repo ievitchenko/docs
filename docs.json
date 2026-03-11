@@ -9,24 +9,29 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "introduction",
-          "quickstart",
-          "authentication"
+        "tab": "Getting Started",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "authentication"
+            ]
+          },
+          {
+            "group": "Additional",
+            "pages": [
+              "errors"
+            ]
+          }
         ]
       },
       {
-        "group": "API Reference",
+        "tab": "API Reference",
         "openapi": "https://development.freeports.io/api/v1-json"
-      },
-      {
-        "group": "Additional",
-        "pages": [
-          "errors"
-        ]
       }
     ]
   },
