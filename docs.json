@@ -11,27 +11,22 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Getting Started",
+        "tab": "Documentation",
         "groups": [
           {
             "group": "Getting Started",
             "pages": [
-              "introduction",
-              "quickstart",
-              "authentication"
+              "index",
+              "quickstart"
             ]
           },
           {
-            "group": "Additional",
+            "group": "API Reference",
             "pages": [
-              "errors"
+              "api-reference/introduction"
             ]
           }
         ]
-      },
-      {
-        "tab": "API Reference",
-        "openapi": "https://development.freeports.io/api/v1-json"
       }
     ]
   },
