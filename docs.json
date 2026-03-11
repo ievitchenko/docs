@@ -1,4 +1,5 @@
 {
+  "$schema": "https://mintlify.com/docs.json",
   "name": "Freeports API",
   "theme": "mint",
   "colors": {
@@ -7,26 +8,28 @@
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
-  "navigation": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "introduction",
-        "quickstart",
-        "authentication"
-      ]
-    },
-    {
-      "group": "API Reference",
-      "openapi": "https://development.freeports.io/api/v1-json"
-    },
-    {
-      "group": "Additional",
-      "pages": [
-        "errors"
-      ]
-    }
-  ],
+  "navigation": {
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "introduction",
+          "quickstart",
+          "authentication"
+        ]
+      },
+      {
+        "group": "API Reference",
+        "openapi": "https://development.freeports.io/api/v1-json"
+      },
+      {
+        "group": "Additional",
+        "pages": [
+          "errors"
+        ]
+      }
+    ]
+  },
   "api": {
     "baseUrl": "https://development.freeports.io/api"
   }
