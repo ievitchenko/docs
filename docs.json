@@ -12,12 +12,9 @@
     "tabs": [
       {
         "tab": "API Reference",
-        "openapi": "openapi.json"
+        "openapi": "api-reference/openapi.json"
       }
     ]
-  },
-  "openapi": {
-    "source": "api-reference/openapi.json"
   },
   "api": {
     "baseUrl": "https://development.freeports.io/api"
