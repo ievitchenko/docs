@@ -1,9 +1,12 @@
 {
   "name": "Freeports API",
-  "logo": {
-    "light": "/logo-light.svg",
-    "dark": "/logo-dark.svg"
+  "theme": "mint",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
   },
+  "favicon": "/favicon.svg",
   "navigation": [
     {
       "group": "Getting Started",
