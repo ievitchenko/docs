@@ -789,7 +789,8 @@
             "content": {
               "image/png": {
                 "schema": {
-                  "type": "file"
+                  "type": "string",
+                  "format": "binary"
                 }
               }
             }
@@ -5382,6 +5383,14 @@
         "summary": "List limit orders for investor",
         "description": "\u003Cb\u003EPermissions:\u003C/b\u003E\n   desk.#deskId#.request.trade\n   ",
         "parameters": [
+          {
+            "name": "organizationId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "name": "deskId",
             "required": true,
@@ -19009,7 +19018,16 @@
         "x-permissions": [],
         "summary": "Get organization permission list",
         "description": "\u003Cb\u003EPermissions:\u003C/b\u003E\n   \u003Cb\u003EANY\u003C/b\u003E\n   ",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "anyOrganizationId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "",
@@ -19073,7 +19091,24 @@
         "x-permissions": [],
         "summary": "Get desk permission list",
         "description": "\u003Cb\u003EPermissions:\u003C/b\u003E\n   \u003Cb\u003EANY\u003C/b\u003E\n   ",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "anyOrganizationId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "anyDeskId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "",
@@ -33899,20 +33934,6 @@
           "password"
         ]
       },
-      "ClientType": {
-        "type": "string",
-        "enum": [
-          "individual",
-          "corporate"
-        ]
-      },
-      "UserType": {
-        "type": "string",
-        "enum": [
-          "client",
-          "employee"
-        ]
-      },
       "GetRoleResponseDto": {
         "type": "object",
         "properties": {
@@ -34084,13 +34105,21 @@
             "description": "Mongo ObjectId"
           },
           "clientType": {
-            "description": "Only present when userType is CLIENT. Possible values: individual | corporate.",
-            "$ref": "#/components/schemas/ClientType"
+            "enum": [
+              "individual",
+              "corporate"
+            ],
+            "type": "string",
+            "description": "Only present when userType is CLIENT. Possible values: individual | corporate."
           },
           "userType": {
+            "enum": [
+              "client",
+              "employee"
+            ],
+            "type": "string",
             "description": "User type: client or employee.",
-            "example": "client",
-            "$ref": "#/components/schemas/UserType"
+            "example": "client"
           },
           "hasFireblocksApiKey": {
             "type": "boolean",
